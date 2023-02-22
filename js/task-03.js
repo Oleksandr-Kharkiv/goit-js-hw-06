@@ -14,22 +14,74 @@ const images = [
 ];
 
 const gallery = document.querySelector(`.gallery`);
-const elementsImg = [];
-const makeImageItem = (images) => {
-  for (const image of images) {
-  
-  const itemEl = document.createElement('li');
-  itemEl.classList.add('gallery__item');
- 
-  const imgEl = document.createElement('img');
-  imgEl.classList.add('gallery__image');
-  imgEl.src = `${image.url}`;
-  imgEl.alt = `${image.alt}`;
-  imgEl.width = 300;
 
-  itemEl.appendChild(imgEl);
-  elementsImg.push(itemEl);
-}
-}
-makeImageItem(images);
-gallery.append(...elementsImg);
+const makeGalleryItem = images
+  .map((image) => `<li class="gallery__item">
+  <img class="gallery__image" src="${image.url}" alt="${image.alt}">
+  </li>`)
+  .join(" ");
+  gallery.insertAdjacentHTML("afterbegin", makeGalleryItem);
+
+// ------------------------------------3 варіант----------
+
+// const gallery = document.querySelector(`.gallery`);
+
+// const makeGalleryItem = images => {
+//   return images.map(image => {
+//     const itemEl = document.createElement('li');
+//     itemEl.classList.add('gallery__item');
+ 
+//     const imgEl = document.createElement('img');
+//     imgEl.classList.add('gallery__image');
+//     imgEl.src = `${image.url}`;
+//     imgEl.alt = `${image.alt}`;
+
+//     itemEl.appendChild(imgEl);
+//     return itemEl
+//   });
+// }
+// const allGalleryItem = makeGalleryItem(images);
+// gallery.append(...allGalleryItem);
+
+// -----------------------------------2 варіант-----------
+
+// const gallery = document.querySelector(`.gallery`);
+
+// const allGalleryItem = images.map((image) => {
+//   const itemEl = document.createElement('li');
+//   itemEl.classList.add('gallery__item');
+ 
+//   const imgEl = document.createElement('img');
+//   imgEl.classList.add('gallery__image');
+//   imgEl.src = `${image.url}`;
+//   imgEl.alt = `${image.alt}`;
+
+//   itemEl.appendChild(imgEl);
+//   return itemEl
+// });
+//     gallery.append(...allGalleryItem);
+
+    //------------------------------------1 варіант-----------
+
+// const gallery = document.querySelector(`.gallery`);
+
+// const allGalleryItem = [];
+// const makeImageItem = (images) => {
+//   for (const image of images) {
+
+//   const itemEl = document.createElement('li');
+//   itemEl.classList.add('gallery__item');
+ 
+//   const imgEl = document.createElement('img');
+//   imgEl.classList.add('gallery__image');
+//   imgEl.src = `${image.url}`;
+//   imgEl.alt = `${image.alt}`;
+
+//   itemEl.appendChild(imgEl);
+//   allGalleryItem.push(itemEl);
+// }
+// }
+//   makeImageItem(images);
+//   gallery.append(...allGalleryItem);
+  
+console.log(gallery)

@@ -15,12 +15,26 @@ const images = [
 
 const gallery = document.querySelector(`.gallery`);
 
-const makeGalleryItem = images
-  .map((image) => `<li class="gallery__item">
-  <img class="gallery__image" src="${image.url}" alt="${image.alt}">
-  </li>`)
-  .join(" ");
-  gallery.insertAdjacentHTML("afterbegin", makeGalleryItem);
+const makeGalleryItem = ({
+  url, 
+  alt,
+  }) => `<li class="gallery__item">
+  <img class="gallery__image" src="${url}" alt="${alt}">
+  </li>`;
+const markup = images.map((data) => makeGalleryItem(data)).join(" ");
+
+gallery.insertAdjacentHTML("afterbegin", markup);
+
+// -------------------------------------4 варіант-----------
+
+// const gallery = document.querySelector(`.gallery`);
+
+// const makeGalleryItem = images
+//   .map((image) => `<li class="gallery__item">
+//   <img class="gallery__image" src="${image.url}" alt="${image.alt}">
+//   </li>`)
+//   .join(" ");
+//   gallery.insertAdjacentHTML("afterbegin", makeGalleryItem);
 
 // ------------------------------------3 варіант----------
 
@@ -43,7 +57,7 @@ const makeGalleryItem = images
 // const allGalleryItem = makeGalleryItem(images);
 // gallery.append(...allGalleryItem);
 
-// -----------------------------------2 варіант-----------
+// -------------------------------------2 варіант-----------
 
 // const gallery = document.querySelector(`.gallery`);
 

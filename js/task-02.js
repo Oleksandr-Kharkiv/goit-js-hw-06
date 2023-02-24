@@ -21,8 +21,19 @@ const makeIngredientItem = array => {
 const elements = makeIngredientItem(ingredients);
 ingredientsList.append(...elements);
 
+// --------------------------------------3 варіант---------------
 
-// ----------------------------------------2й варіант--------------
+// const ingredientsList = document.querySelector(`#ingredients`);
+// const acc = [];
+// ingredients.forEach(function (ingredient) {
+//   const ingredientEl = document.createElement('li');
+//   ingredientEl.textContent = ingredient;
+//   ingredientEl.classList.add('item');
+//   acc.push(ingredientEl);
+// } ); 
+//   ingredientsList.append(...acc);
+
+// ----------------------------------------2 варіант--------------
 
 // const ingredientsList = document.querySelector(`#ingredients`);
 // const acc = [];
@@ -36,7 +47,7 @@ ingredientsList.append(...elements);
 //   }
 //   ingredientsList.append(...acc);
 
-// ----------------------------------------1й варіант---------------
+// ----------------------------------------1 варіант---------------
 
 // const ingredientsList = document.querySelector(`#ingredients`);
 

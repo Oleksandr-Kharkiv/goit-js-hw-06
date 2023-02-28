@@ -5,20 +5,20 @@ const decrementBtn = document.querySelector('[data-action="decrement"]');
 let counterValue = 0;
 
 function increment() {
-    counterValue += 1;
-};
+  counterValue += 1;
+}
 function decrement() {
-    counterValue -= 1;
-};
+  counterValue -= 1;
+}
 
-incrementBtn.addEventListener('click', function() {
-    increment();
-    valueEl.textContent = counterValue;
-} )
-decrementBtn.addEventListener('click', function() {
-    decrement();
-    valueEl.textContent = counterValue;
-} )
+incrementBtn.addEventListener("click", function () {
+  increment();
+  valueEl.textContent = counterValue;
+});
+decrementBtn.addEventListener("click", function () {
+  decrement();
+  valueEl.textContent = counterValue;
+});
 
 // ----------------------------------1 варіант---------
 

@@ -1,43 +1,43 @@
-const numberOfCategories = document.querySelector('#categories');
-console.log(`Number of categories: ${numberOfCategories.children.length}`);
+const numberOfCategoriesEl = document.querySelector("#categories");
+console.log(`Number of categories: ${numberOfCategoriesEl.children.length}`);
 
-const animals = numberOfCategories.firstElementChild;
-const animalsTitle = animals.querySelector('h2');
-console.log(`Category: ${animalsTitle.textContent}`);
-const animalsSet = animals.querySelectorAll('li');
-console.log(`Elements: ${animalsSet.length}`);
+const animalsEl = numberOfCategoriesEl.firstElementChild;
+const animalsTitleEl = animalsEl.querySelector("h2");
+console.log(`Category: ${animalsTitleEl.textContent}`);
+const animalsSetEl = animalsEl.querySelectorAll("li");
+console.log(`Elements: ${animalsSetEl.length}`);
 
-const products = animals.nextElementSibling;
-const productsTitle = products.querySelector('h2');
-console.log(`Category: ${productsTitle.textContent}`);
-const productsSet = products.querySelectorAll('li');
-console.log(`Elements: ${productsSet.length}`);
+const productsEl = animalsEl.nextElementSibling;
+const productsTitleEl = productsEl.querySelector("h2");
+console.log(`Category: ${productsTitleEl.textContent}`);
+const productsSetEl = productsEl.querySelectorAll("li");
+console.log(`Elements: ${productsSetEl.length}`);
 
-const technologies = numberOfCategories.lastElementChild;
-const technologiesTitle = technologies.querySelector('h2');
-console.log(`Category: ${technologiesTitle.textContent}`);
-const technologiesSet = technologies.querySelectorAll('li');
-console.log(`Elements: ${technologiesSet.length}`);
+const technologiesEl = numberOfCategoriesEl.lastElementChild;
+const technologiesTitleEl = technologiesEl.querySelector("h2");
+console.log(`Category: ${technologiesTitleEl.textContent}`);
+const technologiesSetEl = technologiesEl.querySelectorAll("li");
+console.log(`Elements: ${technologiesSetEl.length}`);
 
 // --------------------------------------1 варіант----------
 
-// const numberOfCategories = document.querySelector('#categories');
-// console.log(`Number of categories: ${numberOfCategories.children.length}`);
+// const numberOfCategoriesEl = document.querySelector('#categories');
+// console.log(`Number of categories: ${numberOfCategoriesEl.children.length}`);
 
-// const animals = numberOfCategories.children[0];
-// const animalsTitle = animals.querySelector('h2');
-// console.log(`Category: ${animalsTitle.textContent}`);
-// const animalsSet = animals.querySelectorAll('li');
-// console.log(`Elements: ${animalsSet.length}`);
+// const animalsEl = numberOfCategoriesEl.children[0];
+// const animalsTitleEl = animalsEl.querySelector('h2');
+// console.log(`Category: ${animalsTitleEl.textContent}`);
+// const animalsSetEl = animalsEl.querySelectorAll('li');
+// console.log(`Elements: ${animalsSetEl.length}`);
 
-// const products = numberOfCategories.children[1];
-// const productsTitle = products.querySelector('h2');
-// console.log(`Category: ${productsTitle.textContent}`);
-// const productsSet = products.querySelectorAll('li');
-// console.log(`Elements: ${productsSet.length}`);
+// const productsEl = numberOfCategoriesEl.children[1];
+// const productsTitleEl = productsEl.querySelector('h2');
+// console.log(`Category: ${productsTitleEl.textContent}`);
+// const productsSetEl = productsEl.querySelectorAll('li');
+// console.log(`Elements: ${productsSetEl.length}`);
 
-// const technologies = numberOfCategories.children[2];
-// const technologiesTitle = technologies.querySelector('h2');
-// console.log(`Category: ${technologiesTitle.textContent}`);
-// const technologiesSet = technologies.querySelectorAll('li');
-// console.log(`Elements: ${technologiesSet.length}`);
+// const technologiesEl = numberOfCategoriesEl.children[2];
+// const technologiesTitleEl = technologiesEl.querySelector('h2');
+// console.log(`Category: ${technologiesTitleEl.textContent}`);
+// const technologiesSetEl = technologiesEl.querySelectorAll('li');
+// console.log(`Elements: ${technologiesSetEl.length}`);

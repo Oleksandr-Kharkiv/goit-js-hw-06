@@ -1,41 +1,40 @@
 const ingredients = [
-  'Potatoes',
-  'Mushrooms',
-  'Garlic',
-  'Tomatos',
-  'Herbs',
-  'Condiments',
+  "Potatoes",
+  "Mushrooms",
+  "Garlic",
+  "Tomatos",
+  "Herbs",
+  "Condiments",
 ];
 
-const ingredientsList = document.querySelector(`#ingredients`);
+const ingredientsListEl = document.querySelector(`#ingredients`);
 
-const makeIngredientItem = array => {
-  return array.map(ingredient =>{
-    const ingredientEl = document.createElement('li');
+const makeIngredientItem = (array) => {
+  return array.map((ingredient) => {
+    const ingredientEl = document.createElement("li");
     ingredientEl.textContent = ingredient;
-    ingredientEl.classList.add('item');
-    console.log(ingredientEl)
+    ingredientEl.classList.add("item");
     return ingredientEl;
   });
-}
+};
 const elements = makeIngredientItem(ingredients);
-ingredientsList.append(...elements);
+ingredientsListEl.append(...elements);
 
 // --------------------------------------3 варіант---------------
 
-// const ingredientsList = document.querySelector(`#ingredients`);
+// const ingredientsListEl = document.querySelector(`#ingredients`);
 // const acc = [];
 // ingredients.forEach(function (ingredient) {
 //   const ingredientEl = document.createElement('li');
 //   ingredientEl.textContent = ingredient;
 //   ingredientEl.classList.add('item');
 //   acc.push(ingredientEl);
-// } ); 
-//   ingredientsList.append(...acc);
+// } );
+//   ingredientsListEl.append(...acc);
 
 // ----------------------------------------2 варіант--------------
 
-// const ingredientsList = document.querySelector(`#ingredients`);
+// const ingredientsListEl = document.querySelector(`#ingredients`);
 // const acc = [];
 
 // for (const ingredient of ingredients) {
@@ -43,13 +42,12 @@ ingredientsList.append(...elements);
 //   ingredientEl.textContent = ingredient;
 //   ingredientEl.classList.add('item');
 //   acc.push(ingredientEl);
-//   console.log(acc)
 //   }
-//   ingredientsList.append(...acc);
+//   ingredientsListEl.append(...acc);
 
 // ----------------------------------------1 варіант---------------
 
-// const ingredientsList = document.querySelector(`#ingredients`);
+// const ingredientsListEl = document.querySelector(`#ingredients`);
 
 // const ingredient0 = document.createElement('li');
 // ingredient0.textContent = ingredients[0];
@@ -75,5 +73,5 @@ ingredientsList.append(...elements);
 // ingredient5.textContent = ingredients[5];
 // ingredient5.classList.add('item');
 
-// ingredientsList.append(ingredient0, ingredient1, ingredient2, ingredient3, ingredient4, ingredient5);
-// console.log(ingredientsList);
+// ingredientsListEl.append(ingredient0, ingredient1, ingredient2, ingredient3, ingredient4, ingredient5);
+console.log(ingredientsListEl);
